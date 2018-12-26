@@ -25,9 +25,9 @@
 			    position: absolute !important;
 			    height: 132% !important;
 			    width: 100% !important;
-			    top: -40px !important;
+                top: -40px !important;
 		}
-</style>
+    </style>
 </head>
 
 <body style="background-color: rgb(38,38,38); height: 100%; width: 100%; overflow: hidden;">
@@ -60,30 +60,50 @@
             var thumbnail_url = res[1].split("&thumbnailurl=")[1].split('&')[0];
             var addAutoplay = false;
             var addMute = false;
+            var contentFilter;
             var featuresEtv = ['playpause', 'time', 'volume', 'progressbar', 'videotitle', 'eventcallbacks',
                 'fullscreen', 'qualityswitch', 'bigicons', 'advertisement'
             ];
 
             // CHECKING ITS LIVE CONTENT IF ITS LIVE SET DIFFENT FEATURES 
             content_type = res[1].split("&content_type=")[1];
-            var contentFilter;
-            if (content_type.length > 4) {
-                contentFilter = content_type.split('&')[0];
-            } else {
-                contentFilter = content_type;
-            }
-            if (contentFilter == 'live') {
-                console.log(" Live content");
-                featuresEtv = ['playpause', 'volume', 'videotitle', 'eventcallbacks', 'fullscreen', 'qualityswitch',
-                    'bigicons', 'advertisement'
-                ];
-            } else {
-                console.log(" Not-Live content");
-                featuresEtv = ['playpause', 'time', 'volume', 'progressbar', 'videotitle', 'eventcallbacks',
+            console.log(content_type + " ContentType 1");
+
+            if(content_type == undefined ){
+                console.log(" ContentType is undefined or empty ");
+            }else{
+
+                if (content_type.length > 4) {
+                    contentFilter = content_type.split('&')[0];
+                    console.log(contentFilter + " ContentType 2");
+                } else {
+                    contentFilter = content_type;
+                    console.log(contentFilter + " ContentType 3");
+                }
+    
+                if (contentFilter == 'live') {
+                    console.log(contentFilter + " ContentType 4");
+                    console.log(" Live content");
+                    featuresEtv = ['playpause', 'volume', 'videotitle', 'eventcallbacks', 'fullscreen', 'qualityswitch',
+                        'bigicons', 'advertisement'
+                    ];
+                }else if(contentFilter == undefined){
+                    console.log(contentFilter + " ContentType 5");
+                    featuresEtv = ['playpause', 'time', 'volume', 'progressbar', 'videotitle', 'eventcallbacks',
                     'fullscreen',
                     'qualityswitch', 'bigicons', 'advertisement'
                 ];
+                } else {
+                    console.log(" Not-Live content");
+                    console.log(contentFilter + " ContentType 6");
+                    featuresEtv = ['playpause', 'time', 'volume', 'progressbar', 'videotitle', 'eventcallbacks',
+                        'fullscreen',
+                        'qualityswitch', 'bigicons', 'advertisement'
+                    ];
+                }
             }
+
+
             // CHECKING ITS LIVE CONTENT IF ITS LIVE SET DIFFENT FEATURES END
 
             //AUTO-PLAY START 

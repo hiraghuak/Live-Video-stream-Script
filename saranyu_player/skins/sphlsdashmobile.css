@@ -212,12 +212,17 @@
 
 .sp-player-inner .sp-full-controls .sp-controls-bottom{
 	position: absolute;
-	padding: 0;
-	bottom: 4%;
+	padding: 0 0px 15px 0px;
+	bottom: 0%;
 	height: 40px;
-	width: 93%;
-	left: 2%;
-	background-color: inherit;
+	width: 100%;
+	left: 1px;
+	background-color: #00000069;
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…IgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+	background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.64) 49%, rgba(0,0,0,0.65) 50%);
+	background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.64) 49%,rgba(0,0,0,0.65) 50%);
+	background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.64) 49%,rgba(0,0,0,0.65) 50%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 );
 }
 .sp-controls-top .sp-backarrow {	
 	float: left;
@@ -563,7 +568,7 @@
 
 .sp-controls-bottom-plyr-controls .sp-button.sp-fullscreen-unfullscreen{
 	float: right;
-	margin-right: 0px;
+	margin-right: 10px;
 }
 .sp-controls-bottom-plyr-controls .sp-button.sp-play-pause {
 	margin-right: 10px;
@@ -1198,7 +1203,7 @@ background : url("image/controls.png") -215px -244px;
 
 .sp-player-inner .sp-ad-container .sp-ad-bottom-controlbar .sp-ad-button{
 	position: relative;
-	width: 25px;
+	width: 20px;
 	height: 20px;
 	display: inline-block;
 	padding:0 0.4em;
@@ -1211,8 +1216,8 @@ background : url("image/controls.png") -215px -244px;
 .sp-player-inner .sp-ad-container .sp-ad-bottom-controlbar .sp-ad-button button{
 	display: block;
 	position: relative;
-	height: 20px;
-    width: 20px;
+	height: 30px;
+    width: 30px;
    	padding: 0;
     margin: 0;
     border: 0;
@@ -1225,22 +1230,25 @@ background : url("image/controls.png") -215px -244px;
 /*ad play pause btn start*/
 .sp-player-inner .sp-ad-container .sp-ad-bottom-controlbar .sp-ad-button.sp-ad-playpause{
 	float: left;
+	padding-right: 0px;
 }
 /*play icon*/
 .sp-player-inner .sp-ad-container .sp-ad-bottom-controlbar .sp-ad-button.sp-ad-playpause.sp-ad-play button{
-	background: url(image/controls.png) -35px -45px ;
+	background: url(image/pause.png) no-repeat;
+	background-size: 43%;
 }
-.sp-player-inner .sp-ad-container .sp-ad-bottom-controlbar .sp-ad-button.sp-ad-playpause.sp-ad-play:hover button{
+/*.sp-player-inner .sp-ad-container .sp-ad-bottom-controlbar .sp-ad-button.sp-ad-playpause.sp-ad-play:hover button{
 	background: url(image/controls.png) -102px -45px ;
 }
-
+*/
 /*pause icon*/
 .sp-player-inner .sp-ad-container .sp-ad-bottom-controlbar .sp-ad-button.sp-ad-playpause.sp-ad-pause button{
-	background: url("image/controls.png") -35px -100px;
+	background: url(image/play.png) no-repeat;
+	background-size: 46%;
 }
-.sp-player-inner .sp-ad-container .sp-ad-bottom-controlbar .sp-ad-button.sp-ad-playpause.sp-ad-pause:hover button{
+/*.sp-player-inner .sp-ad-container .sp-ad-bottom-controlbar .sp-ad-button.sp-ad-playpause.sp-ad-pause:hover button{
 	background: url(image/controls.png) -101px -100px;
-}
+}*/
 /*ad play pause btn stop*/
 
 
@@ -1248,36 +1256,37 @@ background : url("image/controls.png") -215px -244px;
 		/*fullscreen*/
 .sp-player-inner .sp-ad-container .sp-ad-bottom-controlbar .sp-ad-button.sp-ad-fullscreen-unfullscreen{
 	float: right;
+	padding-right: 5px;
 }
 .sp-player-inner .sp-ad-container .sp-ad-bottom-controlbar .sp-ad-button.sp-ad-fullscreen-unfullscreen.sp-ad-fullscreen button{
-    background: url(image/controls.png) -39px -263px;
-    /*background: url(image/controls.png) -452px -112px;*/
+    background: url(image/fullscreen3x.png) no-repeat; 
+    background-size: 60%;
 }
-.sp-player-inner .sp-ad-container .sp-ad-bottom-controlbar .sp-ad-button.sp-ad-fullscreen-unfullscreen.sp-ad-fullscreen:hover button{
-   background: url(image/controls.png) -104px -263px;
-     /*background: url(image/controls.png) -531px -112px;*/
-}
-
 		/*un-fullscreen*/
 .sp-player-inner .sp-ad-container .sp-ad-bottom-controlbar .sp-ad-button.sp-ad-fullscreen-unfullscreen.sp-ad-unfullscreen button{
-    background: url(image/controls.png) -39px -210px;
-   /* background: url(image/controls.png) -452px -112px;*/
+    background: url(image/exit_fullscreen.png) no-repeat; 
+    background-size: 60%;
 }
-.sp-player-inner .sp-ad-container .sp-ad-bottom-controlbar .sp-ad-button.sp-ad-fullscreen-unfullscreen.sp-ad-unfullscreen:hover button{
-    background: url(image/controls.png) -105px -210px;
-   /* background: url(image/controls.png) -531px -112px;*/
-}
+
 /*ad fullscreen end*/
 
 /*ad mute and unmute start*/
-.sp-player-inner .sp-ad-container .sp-ad-button.sp-ad-volume-muteunmute{
+.sp-player-inner .sp-ad-container .voume_slider_box {
 	float: left;
 }
+.sp-player-inner .sp-ad-container .sp-ad-button.sp-ad-volume-muteunmute{
+	float: left;
+	padding-left: 2px;
+	padding-right: 2px;
+	margin-top: 1px;
+}
 .sp-player-inner .sp-ad-container .sp-ad-button.sp-ad-volume-muteunmute.sp-ad-unmute button{
-	background: url(image/controls.png) -450px -295px;
+	background: url(image/volume_on.png) no-repeat;
+    background-size: 68%;   
 }
 .sp-player-inner .sp-ad-container .sp-ad-button.sp-ad-volume-muteunmute.sp-ad-mute button{
-    background: url(image/controls.png) -318px -294px;
+    background: url(image/volume_off.png) no-repeat;
+    background-size: 68%;   
 }
 .sp-controls-bottom-plyr-controls .sp-button.sp-volume-btn-wrap {
 	display: none;
@@ -1296,7 +1305,7 @@ background : url("image/controls.png") -215px -244px;
 
 .sp-ad-volume-slider .sp-ad-volume-current{
 	position : absolute;
-	background-color: #39f;
+	background-color: #fff;
 	height: inherit;
 	width: 100%;
 }
@@ -1320,6 +1329,7 @@ background : url("image/controls.png") -215px -244px;
     text-align: center;
     margin: 0 2%;
     font-size: 0.8em;
+    top: 1px;
 }
 
 .sp-player-inner .sp-ad-container .sp-ad-bottom-controlbar .sp-ad-player-time .sp-ad-plyr-currenttime{
@@ -1354,5 +1364,9 @@ background : url("image/controls.png") -215px -244px;
   	font-size: 0.9em;
 }
 /*Ad title end*/
+
+/* Ads related Stop*/
+
+
 
 /* Ads related Stop*/

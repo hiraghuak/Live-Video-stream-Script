@@ -11,7 +11,7 @@
 
 */
 
-/*
+/*©©©©g©©G‸‸‸©©‸‸ g©G
  *	CSS Architecture for Player
 
 		.sp-main-container-wrapper
@@ -108,7 +108,7 @@
     width: 100%;
 }
 .sp-player-inner .sp-player-layers .sp-player-poster img{
-    height: auto;
+    height: 100%;
     width: 100%;
 }
 /*Poster  End*/
@@ -1360,14 +1360,14 @@ background : url("image/controls.png") -215px -244px;
     height: 30px;
     width: 100%;
     background-color: black;
-    padding: 4px;
+    padding: 6px 15px 4px;
     box-sizing: border-box;
 }
 
 .sp-player-inner .sp-ad-container .sp-ad-video-element{
 	position: relative;
     width: 100%;
-    height : calc(100% - 60px);
+    height : calc(100% - 70px);
 }
 /*if banner then hide controls , dummy video element , just show banner portion*/
 .sp-player-inner .sp-ad-container.sp-ad-banner{
@@ -1409,8 +1409,8 @@ background : url("image/controls.png") -215px -244px;
 
 .sp-player-inner .sp-ad-container .sp-ad-bottom-controlbar .sp-ad-button{
 	position: relative;
-	width: 25px;
-	height: 20px;
+	width: 30px;
+	height: 30px;
 	display: inline-block;
 	padding:0 0.4em;
 	text-align: center;
@@ -1422,8 +1422,8 @@ background : url("image/controls.png") -215px -244px;
 .sp-player-inner .sp-ad-container .sp-ad-bottom-controlbar .sp-ad-button button{
 	display: block;
 	position: relative;
-	height: 20px;
-    width: 20px;
+	height: 36px;
+    width: 30px;
    	padding: 0;
     margin: 0;
     border: 0;
@@ -1436,22 +1436,27 @@ background : url("image/controls.png") -215px -244px;
 /*ad play pause btn start*/
 .sp-player-inner .sp-ad-container .sp-ad-bottom-controlbar .sp-ad-button.sp-ad-playpause{
 	float: left;
+	padding-right: 0;
 }
 /*play icon*/
 .sp-player-inner .sp-ad-container .sp-ad-bottom-controlbar .sp-ad-button.sp-ad-playpause.sp-ad-play button{
-	background: url(image/controls.png) -35px -45px ;
+	/*background: url(image/controls.png) -35px -45px ;*/
+	background: url(image/pause.png) no-repeat;
+	background-size: 59%;
 }
-.sp-player-inner .sp-ad-container .sp-ad-bottom-controlbar .sp-ad-button.sp-ad-playpause.sp-ad-play:hover button{
+/*.sp-player-inner .sp-ad-container .sp-ad-bottom-controlbar .sp-ad-button.sp-ad-playpause.sp-ad-play:hover button{
 	background: url(image/controls.png) -102px -45px ;
-}
+}*/
 
 /*pause icon*/
 .sp-player-inner .sp-ad-container .sp-ad-bottom-controlbar .sp-ad-button.sp-ad-playpause.sp-ad-pause button{
-	background: url("image/controls.png") -35px -100px;
+	/*background: url("image/controls.png") -35px -100px;*/
+	background: url(image/play.png) no-repeat;
+	background-size: 62%;
 }
-.sp-player-inner .sp-ad-container .sp-ad-bottom-controlbar .sp-ad-button.sp-ad-playpause.sp-ad-pause:hover button{
+/*.sp-player-inner .sp-ad-container .sp-ad-bottom-controlbar .sp-ad-button.sp-ad-playpause.sp-ad-pause:hover button{
 	background: url(image/controls.png) -101px -100px;
-}
+}*/
 /*ad play pause btn stop*/
 
 
@@ -1459,40 +1464,51 @@ background : url("image/controls.png") -215px -244px;
 		/*fullscreen*/
 .sp-player-inner .sp-ad-container .sp-ad-bottom-controlbar .sp-ad-button.sp-ad-fullscreen-unfullscreen{
 	float: right;
+	padding-right: 0px;
 }
 .sp-player-inner .sp-ad-container .sp-ad-bottom-controlbar .sp-ad-button.sp-ad-fullscreen-unfullscreen.sp-ad-fullscreen button{
-    background: url(image/controls.png) -39px -263px;
-    /*background: url(image/controls.png) -452px -112px;*/
+    background: url(image/fullscreen3x.png) no-repeat; 
+    background-size: 84%;
 }
-.sp-player-inner .sp-ad-container .sp-ad-bottom-controlbar .sp-ad-button.sp-ad-fullscreen-unfullscreen.sp-ad-fullscreen:hover button{
+/*.sp-player-inner .sp-ad-container .sp-ad-bottom-controlbar .sp-ad-button.sp-ad-fullscreen-unfullscreen.sp-ad-fullscreen:hover button{
    background: url(image/controls.png) -104px -263px;
-     /*background: url(image/controls.png) -531px -112px;*/
-}
+}*/
 
 		/*un-fullscreen*/
 .sp-player-inner .sp-ad-container .sp-ad-bottom-controlbar .sp-ad-button.sp-ad-fullscreen-unfullscreen.sp-ad-unfullscreen button{
-    background: url(image/controls.png) -39px -210px;
-   /* background: url(image/controls.png) -452px -112px;*/
+    background: url(image/exit_fullscreen.png) no-repeat; 
+    background-size: 84%;
 }
-.sp-player-inner .sp-ad-container .sp-ad-bottom-controlbar .sp-ad-button.sp-ad-fullscreen-unfullscreen.sp-ad-unfullscreen:hover button{
-    background: url(image/controls.png) -105px -210px;
-   /* background: url(image/controls.png) -531px -112px;*/
-}
+/*.sp-player-inner .sp-ad-container .sp-ad-bottom-controlbar .sp-ad-button.sp-ad-fullscreen-unfullscreen.sp-ad-unfullscreen:hover button{
+    background: url(image/controls.png) -105px -210px;   
+}*/
 /*ad fullscreen end*/
 
 /*ad mute and unmute start*/
 .sp-player-inner .sp-ad-container .sp-ad-button.sp-ad-volume-muteunmute{
 	float: left;
+	padding-left: 2px;
+	padding-right: 2px;
 }
 .sp-player-inner .sp-ad-container .sp-ad-button.sp-ad-volume-muteunmute.sp-ad-unmute button{
-	background: url(image/controls.png) -450px -295px;
+	/*background: url(image/controls.png) -450px -295px;*/
+	background: url(image/volume_on.png) no-repeat;
+    background-size: 91%;    
 }
 .sp-player-inner .sp-ad-container .sp-ad-button.sp-ad-volume-muteunmute.sp-ad-mute button{
-    background: url(image/controls.png) -318px -294px;
+    background: url(image/volume_off.png) no-repeat;
+    background-size: 91%;
 }
 /*ad mute and unmute start*/
 /*volume slider start*/
-.sp-ad-bottom-controlbar .sp-ad-volume-slider.sp-ad-volume-slider-wrap{
+.sp-ad-bottom-controlbar .voume_slider_box {
+	float: left;
+	height: auto;
+	margin-top: 4px;
+	position: static;
+	width: auto;
+}
+.sp-ad-bottom-controlbar .sp-ad-volume-slider.sp-ad-volume-slider-wrap {
     position: relative;
     display: inline-block;
     width: 65px;
@@ -1504,7 +1520,7 @@ background : url("image/controls.png") -215px -244px;
 
 .sp-ad-volume-slider .sp-ad-volume-current{
 	position : absolute;
-	background-color: #E31d29;
+	background-color: #fff;
 	height: inherit;
 	width: 100%;
 }
@@ -1528,6 +1544,7 @@ background : url("image/controls.png") -215px -244px;
     text-align: center;
     margin: 0 2%;
     font-size: 0.8em;
+    top: 5px;
 }
 
 .sp-player-inner .sp-ad-container .sp-ad-bottom-controlbar .sp-ad-player-time .sp-ad-plyr-currenttime{
@@ -1562,6 +1579,8 @@ background : url("image/controls.png") -215px -244px;
   	font-size: 0.9em;
 }
 /*Ad title end*/
+
+
 
 /* Ads related Stop*/
 
